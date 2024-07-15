@@ -1,0 +1,221 @@
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../../Style/StylePageGame.css">
+    <title>Live!</title>
+</head>
+
+
+<body>
+
+<!-- Header -->
+<section id="header">
+    <div class="header container">
+        <div class="nav-bar">
+            <div class="brand">
+                <a href="#hero">
+                    <h1>Hugo THOMAS </h1>
+                </a>
+            </div>
+            <div class="nav-list">
+                <div class="hamburger">
+                    <div class="bar"></div>
+                </div>
+                <ul>
+					<li><a href="../../Index.html" data-after="About">Home</a></li>
+                    <li><a href="../PersoPage/HomePerso.html" data-after="About">About Me</a></li>
+					<li><a href="../GamePage/HomeGame.html" data-after="Projects">Projects</a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</section>
+<!-- End Header -->
+
+
+<section id="ResumeGame">
+    <div class="overview-facts-container">
+            <table style="margin: auto;">
+                <tbody>
+                    <tr>
+                        <td class="overview-facts-cell">
+                            <span>Project Type</span>
+                        </td>
+                        <td class="overview-facts-cell"> University / Group Project</td>
+                    </tr>
+                    <tr>
+                        <td class="overview-facts-cell">
+                            <span>Software Used</span>
+                        </td>
+                        <td class="overview-facts-cell"> Unreal Engine 4</td>
+                    </tr>
+                    <tr>
+                        <td class="overview-facts-cell">
+                            <span>Production Time</span>
+                        </td>
+                        <td class="overview-facts-cell"> 2023, 1 month</td>
+                    </tr>
+                    <tr>
+                        <td class="overview-facts-cell">
+                            <span>Primary Rol(s)</span>
+                        </td>
+                        <td class="overview-facts-cell"> Gameplay Programming / AI Programming</td>
+                    </tr>
+                </tbody>
+            </table>
+
+			<div class="textGameplay">
+                <h2>● Game Concept</h2>
+                    <p>We play a little robot who need to explore a abandoned complexe, but, there are dangerous robot lurking and 
+					each action consumme energy. Its an infiltration game where you need to be cureful of your movement in wich you are limited.</p>
+			</div>
+		</div>
+
+			<div class="hero container">
+				<div class="cover">
+				<img src="../../picture/LiveBanVerticalSimple.png" height="30px"/>
+				</div>
+			</div>
+			
+</section>
+
+
+<!-- Overview -->
+<section id="overview">
+
+    <div class="overview container">
+
+        <div class="details-container">
+            <div class="details-header">
+                <h1>Explication</h1>
+            </div>
+            <div class="details-body">
+			
+			    <h2>My work</h2>
+                <p>In this project I was in charge of the 3C  and the ennemies. For the 3C, make the movement of the character and is 
+				energy system, for the ennemies patrouille and pursuite system.</p>
+
+
+                <h2>● Little robot</h2>
+
+                <p>To be able to infiltrate the character as some movements abilities.It permitted to have acces to place ennemies don't have 
+				or to ousmart them. </p>
+                <p>These movements are linked to a energy system each time one of the movement abilities it use (exept the walk) energy is consumed.</p>
+
+
+                <div class="gif-container">
+
+                    <div class="gif-info">
+                        <h3>Movement:</h3>
+                        <p>- Walk</p>
+                        <p>- Run </p>
+                        <p>- Jump</p>
+                        <p>- Crouch </p>
+                    </div>
+                </div>
+
+                <div class="gif-container">
+                    <div class="gif-info">
+				<h3>Energy system: constraint on use of movement in infiltration</h3>
+                <p>The character have an energy bar. Each time an action is performed the energy decrease. When the energy is empty the character is deconnected
+					and can't react anymore, it need to be reboot. </p>
+				<p>when the player is in reboot phase he need to make a point and click.After that, the energy max decrease and the energy bar is fill to the new amount. 
+				To completly restor the max energy, the player need to find some battery in the map.</p>
+
+                    </div>
+                    <div class="gif">
+                        <img src="../../picture/RebootLive.png" alt="gif">
+                    </div>
+                </div>
+
+                <h2>● Ennemies</h2>
+
+                <p>There only one ennemis in the game. His comportement is simple, the ennemis has a patrol comportement and if 
+				a player is detected during it, it switch to a pursuit comportement. During the puirsuit he run after the player. If he lose the player he come back
+				to his patrol, otherwise he kill the player.</p>
+				<p>There where an issue with the vision node, so I didn't know <strong>how to detect if a player leaves a vision of 
+				an ennemies.<strong></p>
+
+                <div class="gif-container">
+                    <div class="gif-info">
+                        <h3>Patrol</h3>
+                        <p>They are several type of patrol for enemies.</p>
+                        <p>-Immobile: just see what in front of him.</p>
+						<p>-Rotate: don't move but rototate regularly.</p>
+						<p>-Patrouille: follow a series of objectif point in the world.</p>
+						<p>-Patrouille with rotatation: follow a series of objectif point in the world and chek the souronding at each location.</p>
+                    </div>
+                    <div class="gif">
+                        <img src="../../picture/SchemaEnnemisLive.png" alt="gif">
+                    </div>
+                </div>
+
+                <div class="gif-container">
+                    <div class="gif-info">
+                        <h3>Pursuit of an player</h3>
+                        <p> Ennemies have a vision sens, if a player is seen they will stop what they doing and start run after him.</p>
+                        <p>whene they run after a player they lunch continous raycast. If the raycast can touch the target it mean the target is
+						visible. If it can't, it means the target is too far away or there is an obstacle. In both case the target is considered
+						escaped. There a small delay before an ennemies who lost his target come back.</p>
+                    </div>
+                    <div class="gif">
+                        <img src="../../picture/ennemisLive.png" alt="gif">
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
+    </div>
+</section>
+
+<!-- Contact Section -->
+<section id="contact">
+    <div class="contact container">
+        <div>
+            <h1 class="section-title">Contact info</h1>
+        </div>
+        <div class="contact-items">
+            <div class="contact-item">
+                <div class="icon"><img src="../../picture/phoneWhiteS.png" /></div>
+                <div class="contact-info">
+                    <h1>Phone</h1>
+                    <h2>07 85 20 79 87</h2>
+                </div>
+            </div>
+            <div class="contact-item">
+                <div class="icon"><img src="../../picture/MailLogo.jpg" /></div>
+                <div class="contact-info">
+                    <h1>Email</h1>
+                    <h2>hugo.thom2001@gmail.com</h2>
+                </div>
+            </div>
+            <div class="contact-item">
+                <div class="icon"><img src="../../picture/LogoLinkedin.png" /></div>
+                <div class="contact-info">
+                    <h1>Linkedin</h1>
+                    <h2><a href="https://www.linkedin.com/search/results/all/?fetchDeterministicClustersOnly=true&heroEntityKey=urn%3Ali%3Afsd_profile%3AACoAADMQIjsBQpI3kum5ZmIqlARPu64FO6OET4Q&keywords=hugo%20thomas&origin=RICH_QUERY_SUGGESTION&position=0&searchId=ce8c126c-63fd-4870-a72b-a26558bf8f46&sid=!tG&spellCorrectionEnabled=false" target="_blank">lien vers le linkedin</a></h2>
+                </div>
+            </div>
+  		</div>
+		
+		<div class="Network">
+			<h2>My Social Networks</h2>
+			<div class="social-icon">
+				<div class="social-item">
+					<a href="https://github.com/Ballonde"><img src="../../picture/GitHubLogo.png" /></a>
+				</div>
+				<div class="social-item">
+					<a href="https://ballonde.itch.io"/><img src="../../picture/ItchIoLogo.png" /></a>
+				</div>
+			</div>
+		</div>		
+    </div>
+
+<script src="../app.js"></script>
+</body>
+</html>

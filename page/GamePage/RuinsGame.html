@@ -1,0 +1,238 @@
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../../Style/StylePageGame.css">
+    <title>CropsWarriors</title>
+</head>
+
+
+<body>
+
+<!-- Header -->
+<section id="header">
+    <div class="header container">
+        <div class="nav-bar">
+            <div class="brand">
+                <a href="#hero">
+                    <h1>Hugo THOMAS </h1>
+                </a>
+            </div>
+            <div class="nav-list">
+                <div class="hamburger">
+                    <div class="bar"></div>
+                </div>
+                <ul>
+					<li><a href="../HomePage/Home.html" data-after="About">Home</a></li>
+                    <li><a href="../PersoPage/HomePerso.html" data-after="About">About Me</a></li>
+					<li><a href="../GamePage/HomeGame.html" data-after="Projects">Projects</a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</section>
+<!-- End Header -->
+
+
+<section id="ResumeGame">
+    <div class="overview-facts-container">
+            <table style="margin: auto;">
+                <tbody>
+                    <tr>
+                        <td class="overview-facts-cell">
+                            <span>Project Type</span>
+                        </td>
+                        <td class="overview-facts-cell"> University / Group Project</td>
+                    </tr>
+                    <tr>
+                        <td class="overview-facts-cell">
+                            <span>Software Used</span>
+                        </td>
+                        <td class="overview-facts-cell"> Unreal Engine 5</td>
+                    </tr>
+                    <tr>
+                        <td class="overview-facts-cell">
+                            <span>Languages Used</span>
+                        </td>
+                        <td class="overview-facts-cell"> Blueprints</td>
+                    </tr>
+                    <tr>
+                        <td class="overview-facts-cell">
+                            <span>Primary Rol(s)</span>
+                        </td>
+                        <td class="overview-facts-cell"> Gameplay Programming / Technical Designer</td>
+                    </tr>
+                </tbody>
+            </table>
+
+			<div class="textGameplay">
+                <h2>● Game Concept</h2>
+                    <p>The concept of this game is simple yet original. We play in first person in a mystical universe. It's a fast-paced FPS but with the particularity of bullet hell.
+                        That means there's a large number of projectiles on the screen, formed with specific patterns. The goal is to dodge them while killing enemies.</p>
+			</div>
+		</div>
+
+			<div class="hero container">
+				<div class="cover">
+				<img src="../../picture/CWCover.png" height="30px"/>
+				</div>
+			</div>
+			
+</section>
+
+
+<!-- Overview -->
+<section id="overview">
+
+    <div class="overview container">
+
+        <div class="details-container">
+            <div class="details-header">
+                <h1>Work</h1>
+            </div>
+            <div class="details-body">
+                <h2>● Weapon</h2>
+
+                <p>Weapons are very important in the game, is one of the mecanics who give a better feeling.</p>
+                <p>So, the are a wide variety of weapon. Some are weak  with simple effect and some are strong with special effect.</p>
+
+
+                <div class="gif-container">
+
+                    <div class="gif-info">
+                        <h3>Type of weapon</h3>
+                        <p>- Gun</p>
+                        <p>- Laser </p>
+                        <p>- Charge</p>
+                        <p>- Melee</p>
+						<p>- Throw</p>
+                        <p>- Special </p>
+                    </div>
+                    <div class="gif">
+                        <img src="../Gif/Mouvement.gif" alt="gif">
+                    </div>
+                </div>
+
+                <div class="gif-container">
+                    <div class="gif-info">
+                        <h3>Architecture: clear and simple architecture of a lot of différent weapon</h3>
+                        <p>First of all, I have made a list of function and parameter for each type of weapon.</p>
+                        <p>A lot of these function and parameter are commun between differents types.</p>
+                        <p>I have establish a architecture based on the commun point. </p>
+                    </div>
+                    <div class="gif">
+                        <img src="../Gif/DashDodge.gif" alt="gif">
+                    </div>
+                </div>
+
+                <div class="gif-container">
+                    <div class="gif">
+                        <img src="../Gif/Slide.gif" alt="gif">
+                    </div>
+                    <div class="gif-info">
+                        <h3>Tools:easy access to creation and modification of a weapon</h3>
+                        <p>To facilitate the modification and creation of a weapon I use scriptable object contening the data.</p>
+                        <p>This way, game disagner or other don't need to enter in the script, its all in inspector.  </p>
+                        <p>They can modify them when they want and experiment. </p>
+                    </div>
+                </div>
+
+                <h2>● Ennemies</h2>
+
+                <p>The ennemies need constant work, they evolve a lot with the project.  </p>
+
+                <div class="gif-container">
+                    <div class="gif-info">
+                        <h3>Commun Architecture</h3>
+                        <p>Since they wil be several ennemis I wanted to have a commun Architecture, this ways it easier to uniforme the effect of weapon and the global comportment of ennemis. </p>
+                        <p>I have defined 4 states, mouvement, attack, death, nothing. All of the ennemis have these but the effect can be different. </p>
+                    </div>
+                    <div class="gif">
+                        <img src="../Gif/DashSlowMo.gif" alt="gif">
+                    </div>
+                </div>
+
+                <div class="gif-container">
+                    <div class="gif-info">
+                        <h3>Camera Shake</h3>
+                        <p>It's no secret that camera shake is essential for immersion in the game. That's why I've used it on all the movements in the game.</p>
+                        <p>Here's an example of camera shake during landing. It varies in intensity depending on the duration of the fall. </p>
+                    </div>
+                    <div class="gif">
+                        <img src="../Gif/JumpShake.gif" alt="gif">
+                    </div>
+                </div>
+
+                <h3>Adjustments of values</h3>
+
+                <p>And finally, the last point, value adjustments. To make this clearer, I'll give an example. </p>
+                    <p>When the player changes direction of movement, going from left to right, for example, they gain a slight speed boost for a very short duration,
+                        giving them the sensation of being constantly on their toes. </p>
+                    <p>Another example is the speed curve of the dash, which is not linear but faster at the beginning than at the end to give it more impact.</p>
+
+                <h2>● The Weapons</h2>
+                <p>Currently, there are two weapons available. The first one is the Vajra, which is a short-range weapon dealing high area damage but with a low rate of fire.
+                    <p>The second one is the Chakram, which has a high rate of fire with lower damage and longer range.</p>
+                <p>We added overload to encourage players to switch weapons regularly, forcing them to switch from short to long range, further accentuating movement.</p>
+                <p>Each of the two weapons underwent the same polish process as the movement.</p>
+
+                <div class="details-img"> <img src="../Gif/Vajra.gif" alt="gif"> </div>
+                <div class="details-img"> <img src="../Gif/Chakram.gif" alt="gif"> </div>
+
+                <p>PS: The visual effects (VFX) and animations will be presented and detailed here later when they are finalized.</p>
+
+            </div>
+        </div>
+
+    </div>
+</section>
+
+<!-- Contact Section -->
+<section id="contact">
+    <div class="contact container">
+        <div>
+            <h1 class="section-title">Contact info</h1>
+        </div>
+        <div class="contact-items">
+            <div class="contact-item">
+                <div class="icon"><img src="../../picture/phoneWhiteS.png" /></div>
+                <div class="contact-info">
+                    <h1>Phone</h1>
+                    <h2>07 85 20 79 87</h2>
+                </div>
+            </div>
+            <div class="contact-item">
+                <div class="icon"><img src="../../picture/MailLogo.jpg" /></div>
+                <div class="contact-info">
+                    <h1>Email</h1>
+                    <h2>hugo.thom2001@gmail.com</h2>
+                </div>
+            </div>
+            <div class="contact-item">
+                <div class="icon"><img src="../../picture/LogoLinkedin.png" /></div>
+                <div class="contact-info">
+                    <h1>Linkedin</h1>
+                    <h2><a href="https://www.linkedin.com/search/results/all/?fetchDeterministicClustersOnly=true&heroEntityKey=urn%3Ali%3Afsd_profile%3AACoAADMQIjsBQpI3kum5ZmIqlARPu64FO6OET4Q&keywords=hugo%20thomas&origin=RICH_QUERY_SUGGESTION&position=0&searchId=ce8c126c-63fd-4870-a72b-a26558bf8f46&sid=!tG&spellCorrectionEnabled=false" target="_blank">lien vers le linkedin</a></h2>
+                </div>
+            </div>
+  		</div>
+		
+		<div class="Network">
+			<h2>My Social Networks</h2>
+			<div class="social-icon">
+				<div class="social-item">
+					<a href="https://github.com/Minewarpro"><img src="../../picture/GitHubLogo.png" /></a>
+				</div>
+				<div class="social-item">
+					<a href="https://minewarpro.itch.io"><img src="../../picture/ItchIoLogo.png" /></a>
+				</div>
+			</div>
+		</div>		
+    </div>
+
+<script src="../app.js"></script>
+</body>
+</html>

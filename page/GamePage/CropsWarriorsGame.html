@@ -1,0 +1,257 @@
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../../Style/StylePageGame.css">
+    <title>CropsWarriors</title>
+</head>
+
+
+<body>
+
+<!-- Header -->
+<section id="header">
+    <div class="header container">
+        <div class="nav-bar">
+            <div class="brand">
+                <a href="#hero">
+                    <h1>Hugo THOMAS </h1>
+                </a>
+            </div>
+            <div class="nav-list">
+                <div class="hamburger">
+                    <div class="bar"></div>
+                </div>
+                <ul>
+					<li><a href="../../Index.html" data-after="About">Home</a></li>
+                    <li><a href="../PersoPage/HomePerso.html" data-after="About">About Me</a></li>
+					<li><a href="../GamePage/HomeGame.html" data-after="Projects">Projects</a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</section>
+<!-- End Header -->
+
+
+<section id="ResumeGame">
+    <div class="overview-facts-container">
+            <table style="margin: auto;">
+                <tbody>
+                    <tr>
+                        <td class="overview-facts-cell">
+                            <span>Project Type</span>
+                        </td>
+                        <td class="overview-facts-cell"> University / Group Project</td>
+                    </tr>
+                    <tr>
+                        <td class="overview-facts-cell">
+                            <span>Software Used</span>
+                        </td>
+                        <td class="overview-facts-cell"> Unity 5</td>
+                    </tr>
+                    <tr>
+                        <td class="overview-facts-cell">
+                            <span>Production Time</span>
+                        </td>
+                        <td class="overview-facts-cell"> 2023-2024, 8 months</td>
+                    </tr>
+                    <tr>
+                        <td class="overview-facts-cell">
+                            <span>Primary Rol(s)</span>
+                        </td>
+                        <td class="overview-facts-cell"> Gameplay Programming/AI programming</td>
+                    </tr>
+                </tbody>
+            </table>
+
+			<div class="textGameplay">
+                <h2>● Game Concept</h2>
+                    <p>It's a multiplayer cooperatif game. Players need to explore a map to collect ressources, then bring it back to theirs base. 
+					During the exploration they will encounter ennemis. They will become stronger be killing them and looting news weapons.</p>
+			</div>
+		</div>
+
+			<div class="hero container">
+				<div class="cover">
+				<img src="../../picture/CWCover.png" height="30px"/>
+				</div>
+			</div>
+			
+</section>
+
+
+<!-- Overview -->
+<section id="overview">
+
+    <div class="overview container">
+
+        <div class="details-container">
+            <div class="details-header">
+                <h1>Explication</h1>
+            </div>
+            <div class="details-body">
+			
+			    <h2>My work</h2>
+                <p>I worked on two majors things: weapons system and ennemies. We needed differents types of weapons with a lot of settings.
+					Each of them should be unique in theirs effects and utility.
+					The second thing is the differents types of ennemis. Theirs comportements (IA) and theirs interactions with the
+					weapons.					</p>
+                <img src="../../picture/timelineCrops.png" alt="gif">
+			
+			
+                <h2>● Weapon</h2>
+
+                <p>I was in charge of the weapon system. The player must be able to pick a weapon on the ground and to attack with it,
+				 it should work with <Strong>any</strong> weapon. We wanted a wide a range of weapon: gun, shotgun, laser,... I sorted out my problematic:
+				<strong>How i do a well-constructed code to make weapon easily?</strong></p>
+
+
+                <div class="gif-container">
+
+                    <div class="gif-info">
+                        <h3>Steps 1: Type of weapon</h3>
+						<p>I established all the weapon type needed.</p>
+                        <p>- Gun</p>
+                        <p>- Laser </p>
+                        <p>- Charge</p>
+                        <p>- Melee</p>
+						<p>- Throw</p>
+                        <p>- Special </p>
+                    </div>
+                    <div class="gif">
+                        <img src="../../picture/WeaponDisplay.png" alt="gif">
+                    </div>
+                </div>
+
+                <div class="gif-container">
+                    <div class="gif-info">
+                        <h3>Steps 2: create an architecture: clear and simple architecture of a lot of differents weapons</h3>
+                        <p>First of all, I have made a list of function and parameter for each type of weapon.</p>
+                        <p>A lot of these function and parameter are commun between several types.
+						I established an architecture based on these communs points.</p>
+                        <p>At the root we have mom-class with all commun fonction(recharge, shoot,...) and parameter(attack speed, damage,..)
+						for the gun. Derived from that the type(melee,throw,gun) and the archetype of these type. For example laserGun, chargeGun,... for type Gun.  </p>
+                    </div>
+                    <div class="gif">
+                        <img src="../../picture/architectureWeapon.png" alt="gif">
+                    </div>
+                </div>
+
+                <div class="gif-container">
+                    <div class="gif">
+                        <img src="../../picture/DataWeapon.png" alt="gif" height="20" width="50">
+                    </div>
+                    <div class="gif-info">
+                        <h3>Steps 3: create a tools: easy access to creation and modification of a weapon</h3>
+                        <p>To facilitate the modification and creation of a weapon I use scriptable object contening the data.</p>
+                        <p>This way, game disagner or other don't need to enter in the script, its all in inspector.  </p>
+                        <p>They can modify them when they want and experiment, it's easy and quick. </p>
+                    </div>
+                </div>
+				
+				<h3>Steps 4: Special weapon: how to include in the architecture? </h3>
+                <p>To produce a special weapon i take the clostest type in the architecture and i check where the difference will be. If the modification is on the weapon
+				itself or if is the effect of a munition it won't be the same changement. Most of the special weapon need to be make one by one
+				, it take a lot of time.</p>
+				
+
+                <h2>● Ennemies</h2>
+
+                <p>The ennemies and the weapon are the core gameplay of our game. They need constant work, they evolve a lot with the project and with the interaction between them. 
+				They are only 3 types of ennemies: Basic, Flying, Big. Some of them don't react the same way to certain weapon.
+				<strong>So i was wondering how to do a modulaire architecture for the different type of ennemis?</strong></p>
+
+                <div class="gif-container">
+				    <div class="gif">
+                        <img src="../../picture/architectureEnnemisCW.png" alt="gif">
+                    </div>
+                    <div class="gif-info">
+                        <h3>Steps 1 :Commun Architecture: Simple model of ennemies</h3>
+                        <p>Since they will be several ennemis I wanted to have a commun Architecture, this ways it easier to uniforme the effect of weapon and the global comportment of ennemis. </p>
+                        <p>I have defined 4 states, mouvement, attack, death, nothing. All of the ennemis have these but the effect can be different. 
+						In addition we need to organize the information reseaux, who communic what with who. </p>
+                    </div>
+
+                </div>
+
+                <div class="gif-container">
+                    <div class="gif-info">
+                        <h3>Steps 2: Basic and Big ennemies: same but different</h3>
+                        <p>These two types of ennemies are very similar. Their pattern are of attack and movement are the same, only their stats and the effect of some weapon change.</p>
+                        <p>Movement: they choose the nearest target (player) and go the them by using a navmesh. When they are close enough the switch to attack.</p>
+						<p>Attack: if close enough of an target they hit him by a small charge.</p>
+                    </div>
+                    <div class="gif">
+                        <img src="../../picture/ennemisBasicPreCrops.png" alt="gif">
+                    </div>
+                </div>
+				
+				<div class="gif-container">
+                    <div class="gif-info">
+                        <h3>Steps 3: Flying ennemies: ennemies without navmesh</h3>
+						<p>Is comportment is very different from the other two ennemies. It need the attack at distance and to be high enough
+							to not be able to be hit by normal mean. Only special weapon can hit or player should grab an allies to gain height.</p>
+                        <p>Movement: It not use any navmesh, it use raycast vertical and horizontal. Vertical to check the distance to the ground 
+						to keep a good height, and horizontal to detect obstacle in front of him if that the case he gain height.</p>
+						<p>Attack: when a good enough distance he fire projectile toward player. It also take care to check the height ton be able to be hit.</p>
+                    </div>
+                    <div class="gif">
+                        <img src="../../picture/ennemisFlyCrops.png" alt="gif">
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+</section>
+
+<!-- Contact Section -->
+<section id="contact">
+    <div class="contact container">
+        <div>
+            <h1 class="section-title">Contact info</h1>
+        </div>
+        <div class="contact-items">
+            <div class="contact-item">
+                <div class="icon"><img src="../../picture/phoneWhiteS.png" /></div>
+                <div class="contact-info">
+                    <h1>Phone</h1>
+                    <h2>07 85 20 79 87</h2>
+                </div>
+            </div>
+            <div class="contact-item">
+                <div class="icon"><img src="../../picture/MailLogo.jpg" /></div>
+                <div class="contact-info">
+                    <h1>Email</h1>
+                    <h2>hugo.thom2001@gmail.com</h2>
+                </div>
+            </div>
+            <div class="contact-item">
+                <div class="icon"><img src="../../picture/LogoLinkedin.png" /></div>
+                <div class="contact-info">
+                    <h1>Linkedin</h1>
+                    <h2><a href="https://www.linkedin.com/search/results/all/?fetchDeterministicClustersOnly=true&heroEntityKey=urn%3Ali%3Afsd_profile%3AACoAADMQIjsBQpI3kum5ZmIqlARPu64FO6OET4Q&keywords=hugo%20thomas&origin=RICH_QUERY_SUGGESTION&position=0&searchId=ce8c126c-63fd-4870-a72b-a26558bf8f46&sid=!tG&spellCorrectionEnabled=false" target="_blank">lien vers le linkedin</a></h2>
+                </div>
+            </div>
+  		</div>
+		
+		<div class="Network">
+			<h2>My Social Networks</h2>
+			<div class="social-icon">
+				<div class="social-item">
+					<a href="https://github.com/Ballonde"><img src="../../picture/GitHubLogo.png" /></a>
+				</div>
+				<div class="social-item">
+					<a href="https://ballonde.itch.io"/><img src="../../picture/ItchIoLogo.png" /></a>
+				</div>
+			</div>
+		</div>		
+    </div>
+
+<script src="../app.js"></script>
+</body>
+</html>
